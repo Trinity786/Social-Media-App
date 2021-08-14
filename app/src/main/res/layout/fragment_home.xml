@@ -1,18 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
     tools:context=".Fragments.Home">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFEBEE"
-        android:textColor="@color/black"
-        android:textSize="26sp"
-        android:gravity="center"
-        android:text="HOme Fragment" />
 
-</FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/first_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="@dimen/_60mdp"
+                android:layout_height="@dimen/_60mdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/greeen"
+                app:civ_border_color="#FFC107"
+                app:civ_border_width="2dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10mdp"
+                android:text="Discover"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_24font_mdp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/first_layout"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border_color" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/first_layout"
+                android:layout_marginTop="@dimen/_15mdp"
+                android:orientation="horizontal">
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/Round_imageView"
+                        android:layout_width="@dimen/_120mdp"
+                        android:layout_height="@dimen/_80mdp"
+                        android:layout_marginStart="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user_bg"
+                        app:riv_border_color="#673AB7"
+                        app:riv_border_width="2dip"
+                        app:riv_corner_radius="5dip"
+                        app:riv_oval="false" />
+
+
+                    <ImageView
+                        android:id="@+id/add_story"
+                        android:layout_width="28dp"
+                        android:layout_height="25dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/plus" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_55mdp"
+                        android:fontFamily="@font/acme"
+                        android:text="Create Story"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+
+                        />
+
+
+                </RelativeLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/Story_recyclerView"
+                    android:layout_height="match_parent" />
+
+
+
+            </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
