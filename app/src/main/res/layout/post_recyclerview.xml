@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/_10mdp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/first_relative">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/post_Profile"
+            android:layout_width="@dimen/_55mdp"
+            android:layout_height="@dimen/_55mdp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/greeen"
+            app:civ_border_color="#C8E6C9"
+            app:civ_border_width="2dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rahul Singh"
+            android:textStyle="bold"
+            android:minHeight="@dimen/_20mdp"
+            android:id="@+id/post_userName"
+            android:fontFamily="@font/acme"
+            android:layout_toRightOf="@+id/post_Profile"
+            android:layout_marginStart="@dimen/_15mdp"
+            android:layout_marginTop="@dimen/_15mdp"
+            android:textSize="@dimen/_16font_mdp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gamer/music lover "
+            android:textStyle="bold"
+            android:id="@+id/post_category"
+            android:fontFamily="@font/adamina"
+            android:layout_toRightOf="@+id/post_Profile"
+            android:layout_below="@+id/post_userName"
+            android:layout_marginStart="@dimen/_15mdp"
+            android:layout_marginTop="@dimen/_4mdp"
+            android:minHeight="@dimen/_20mdp"
+            android:textColor="#B8ACAC"/>
+
+
+
+        <ImageView
+             android:layout_width="@dimen/_16mdp"
+             android:layout_height="@dimen/_16mdp"
+             android:src="@drawable/dot"
+             android:layout_alignParentEnd="true"
+             android:layout_centerVertical="true"
+             android:id="@+id/dots"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/second_relative"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:layout_below="@+id/first_relative">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/post_roundedRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_170mdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_bg"
+            app:riv_corner_radius="8dip"
+            app:riv_oval="false" />
+
+        <ImageView
+            android:layout_width="@dimen/_25mdp"
+            android:layout_height="@dimen/_25mdp"
+            android:src="@drawable/save"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/post_save"
+            android:layout_marginTop="@dimen/_10mdp"
+            android:layout_marginEnd="@dimen/_10mdp"
+            app:tint="@color/white" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/second_relative">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15mdp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8mdp"
+                android:id="@+id/post_relative">
+
+                <ImageView
+                    android:layout_width="@dimen/_25mdp"
+                    android:layout_height="@dimen/_20mdp"
+                    android:id="@+id/heart"
+                    android:src="@drawable/heart"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="990"
+                    android:id="@+id/like"
+                   android:layout_toEndOf="@+id/heart"
+                    android:layout_marginStart="@dimen/_8mdp"
+                    android:layout_centerVertical="true"
+                    android:textColor="#8C8484"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/comment_relative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_25mdp"
+                android:padding="@dimen/_8mdp">
+
+                <ImageView
+                    android:id="@+id/chat"
+                    android:layout_width="@dimen/_25mdp"
+                    android:layout_height="@dimen/_20mdp"
+                    android:src="@drawable/chat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/comment"
+                    android:layout_marginStart="@dimen/_8mdp"
+                    android:layout_toEndOf="@+id/chat"
+                    android:text="290"
+                    android:textColor="#8C8484" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/share_relative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_25mdp"
+                android:padding="@dimen/_8mdp">
+
+                <ImageView
+                    android:id="@+id/share"
+                    android:layout_width="@dimen/_25mdp"
+                    android:layout_height="@dimen/_20mdp"
+                    android:src="@drawable/share" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_8mdp"
+                    android:layout_toEndOf="@+id/share"
+                    android:text="990"
+                    android:id="@+id/post_share"
+                    android:textColor="#8C8484" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

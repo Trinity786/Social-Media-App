@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10mdp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/roundedRecycler"
+        android:layout_width="@dimen/_120mdp"
+        android:layout_height="@dimen/_80mdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user_bg"
+        app:riv_corner_radius="5dip"
+        app:riv_oval="false" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_Profile"
+        android:layout_width="@dimen/_30mdp"
+        android:layout_height="@dimen/_30mdp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/greeen"
+        app:civ_border_color="#FFFFFF"
+        app:civ_border_width="2dp" />
+
+
+    <ImageView
+        android:layout_width="@dimen/_25mdp"
+        android:layout_height="@dimen/_25mdp"
+        android:id="@+id/Story_type"
+        android:src="@drawable/live"
+        android:layout_marginStart="@dimen/_90mdp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_55mdp"
+        android:fontFamily="@font/acme"
+        android:text="Rahul singh"
+        android:id="@+id/Recycler_userName"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13font_mdp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
